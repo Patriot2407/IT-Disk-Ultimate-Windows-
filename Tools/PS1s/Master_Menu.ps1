@@ -4,7 +4,7 @@ $psversionspecific = $PSVersionTable.PSVersion
 <#------------------------------------------- Start Declared Vars ---------------------------------------------------------------------#>
 $mypath = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
 $mypath = [string]$mypath
-[string]$Author = 'Jeff Czebiniak'
+[string]$Author = 'Czebiniak'
 [string]$AuthorDate = '2017'
 $location = (Split-Path $MyInvocation.InvocationName)
 <#------------------------------------------- End Declared Vars -----------------------------------------------------------------------#>
