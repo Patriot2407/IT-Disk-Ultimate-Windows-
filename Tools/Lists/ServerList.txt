@@ -1,0 +1,9 @@
+testserver
+ms12
+sqlserver
+webserver
+dbserver
+vtserver
+fileserver
+vaultserver
+backup
