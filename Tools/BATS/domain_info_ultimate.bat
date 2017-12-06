@@ -1,5 +1,5 @@
 REM ***********************
-REM by Jeff Czebiniak
+REM by Czebiniak
 REM ***********************
 
 @echo off && cls

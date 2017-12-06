@@ -1,6 +1,6 @@
 ﻿Clear-Host
 $i = 1
-$IPadd = "192.9.200."
+$IPadd = "192.168.0"
 Do {
 $IPHost = $IPadd + $i
     try {$Pingo = Get-WMIObject Win32_PingStatus -f "Address ='$IPHost'" 

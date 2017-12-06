@@ -2,11 +2,11 @@
 
 # Please Configure the following variables....
 
-$smtpServer="webserver.dandr.com"
+$smtpServer="SERVER"
 
 $expireindays = 7
 
-$from = "D & R"
+$from = "SERVER"
 
 ###################################################################################################################
 

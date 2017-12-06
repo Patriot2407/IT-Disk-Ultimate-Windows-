@@ -1,5 +1,5 @@
 ﻿<#Change this variable to your desired domain controller#>
-$DomainController = "testserver" <#--------- Must be in quotes#>
+$DomainController = "SERVER" <#--------- Must be in quotes#>
 
 <#------------------Do not edit below this line-----------------------#>
 Clear-Host
