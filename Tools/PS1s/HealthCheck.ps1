@@ -7,9 +7,9 @@ Write-Host "$computername"
 $AVGProc = Get-WmiObject -computername $computername win32_processor | 
 Measure-Object -property LoadPercentage -Average | Select Average
 $OS = gwmi -Class win32_operatingsystem -computername $computername |
-Select-Object @{Name = "MemoryUsage"; Expression = {ì{0:N2}î -f ((($_.TotalVisibleMemorySize - $_.FreePhysicalMemory)*100)/ $_.TotalVisibleMemorySize) }}
+Select-Object @{Name = "MemoryUsage"; Expression = {‚Äú{0:N2}‚Äù -f ((($_.TotalVisibleMemorySize - $_.FreePhysicalMemory)*100)/ $_.TotalVisibleMemorySize) }}
 $vol = Get-WmiObject -Class win32_Volume -ComputerName $computername -Filter "DriveLetter = 'C:'" |
-Select-object @{Name = "C PercentFree"; Expression = {ì{0:N2}î -f  (($_.FreeSpace / $_.Capacity)*100) } }
+Select-object @{Name = "C PercentFree"; Expression = {‚Äú{0:N2}‚Äù -f  (($_.FreeSpace / $_.Capacity)*100) } }
   
 $result += [PSCustomObject] @{ 
         ServerName = "$computername"
@@ -48,9 +48,9 @@ $result += [PSCustomObject] @{
 $Outputreport | out-file C:\Scripts\Test.htm 
 Invoke-Expression C:\Scripts\Test.htm
 ##Send email functionality from below line, use it if you want   
-$smtpServer = "webserver.dandr.com"
-$smtpFrom = "ServerHealthReport@dandr.com"
-$smtpTo = "jczebiniak@dandr.com"
+$smtpServer = "server.com"
+$smtpFrom = "ServerHealthReport@address.com"
+$smtpTo = "email@address.com"
 $messageSubject = "Servers Health report"
 $message = New-Object System.Net.Mail.MailMessage $smtpfrom, $smtpto
 $message.Subject = $messageSubject
